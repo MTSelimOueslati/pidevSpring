@@ -23,9 +23,45 @@ public class Contract implements Serializable{
 	@Column(name= "id")
 	private int idContract;
 	
-	@Column(name="Contract Type")
+	@Column(name="Contract_Type")
 	@Enumerated(EnumType.STRING)
 	private ContractType contracttype;
+
+	public Contract() {
+		super();
+	}
+
+	public Contract(int idContract, ContractType contracttype) {
+		super();
+		this.idContract = idContract;
+		this.contracttype = contracttype;
+	}
+
+	public Contract(ContractType contracttype) {
+		super();
+		this.contracttype = contracttype;
+	}
+
+	public int getIdContract() {
+		return idContract;
+	}
+
+	public void setIdContract(int idContract) {
+		this.idContract = idContract;
+	}
+
+	public ContractType getContracttype() {
+		return contracttype;
+	}
+
+	public void setContracttype(ContractType contracttype) {
+		this.contracttype = contracttype;
+	}
+
+	@Override
+	public String toString() {
+		return "Contract [idContract=" + idContract + ", contracttype=" + contracttype + "]";
+	}
 	
 	
 	

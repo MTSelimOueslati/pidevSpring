@@ -21,11 +21,10 @@ public class Offer implements Serializable {
 	@Column(name= "id")
 	private int idOffer;
 	
-	@Column(name="Type Offer")
+	@Column(name="Type_Offer")
 	private String typeoffer;
 	
-	@ManyToOne
-	@JoinColumn(name= "idBank")
+	@Column(name="Bank")
 	private Bank bank;
 	
 	@ManyToOne

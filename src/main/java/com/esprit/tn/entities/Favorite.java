@@ -20,7 +20,7 @@ private static final long serialVersionUID = 1L;
 	@Column(name= "id")
 	private int idfavorite;
 	
-	@Column(name="Favorite Name")
+	@Column(name="Favorite_Name")
 	private String favoritename;
 
 	

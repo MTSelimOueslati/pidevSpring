@@ -1,9 +1,7 @@
 package com.esprit.tn.entities;
 
 import java.io.Serializable;
-import java.util.Set;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -11,9 +9,6 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 
@@ -28,6 +23,9 @@ public class Ad implements Serializable {
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
 	@Column(name= "id")
 	private int idAd;
+	
+	@Column(name="ad")
+	private String ad;
 	
 	@Column(name="AdType")
 	@Enumerated(EnumType.STRING)
@@ -60,25 +58,19 @@ public class Ad implements Serializable {
 	@Column(name="Elevator")
 	private boolean elevator;
 	
-	@Column(name="Swimming Pool")
+	@Column(name="Swimming_Pool")
 	private boolean pool;
 	
 	@Column(name="Furnished")
 	private boolean furnished;
 	
-	@ManyToOne
-	@JoinColumn(name = "idUser", referencedColumnName = "id", insertable = false, updatable = false)
 	private User user;
 	
 	@Column(name="State")
 	@Enumerated(EnumType.STRING)
 	private State state;
 
-	@OneToMany(cascade= CascadeType.ALL, mappedBy= "Visit")
-	private Set<Visit> visits;
-	
-	@OneToMany(cascade= CascadeType.ALL, mappedBy= "Media")
-	private Set<Media> media;
+
 	
 	public Ad() {
 		super();

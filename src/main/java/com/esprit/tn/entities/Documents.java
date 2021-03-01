@@ -25,10 +25,10 @@ public class Documents implements Serializable {
 	@Column(name="Payslip")
 	private String Payslip;
 	
-	@Column(name="Letter Of Commitment")
+	@Column(name="Letter_Of_Commitment")
 	private String locommitement;
 	
-	@Column(name="Payment Justification")
+	@Column(name="Payment_Justification")
 	private float paymentjustification;
 
 	public Documents() {

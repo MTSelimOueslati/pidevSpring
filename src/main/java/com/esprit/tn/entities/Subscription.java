@@ -29,10 +29,10 @@ private static final long serialVersionUID = 1L;
 	private float offer;
 	
 	@Temporal(TemporalType.DATE)
-	@Column(name="Expiration Date")
+	@Column(name="Expiration_Date")
 	private Date expirationdate;
 	
-	@Column(name="Subscription Type")
+	@Column(name="Subscription_Type")
 	@Enumerated(EnumType.STRING)
 	private SubType subtype;
 

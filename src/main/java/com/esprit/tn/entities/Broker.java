@@ -11,7 +11,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name= "Brokers")
-public class Broker extends User implements Serializable {
+public class Broker implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 

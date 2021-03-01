@@ -12,7 +12,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name= "Moderators")
-public class Moderator extends User implements Serializable{
+public class Moderator implements Serializable{
 	private static final long serialVersionUID = 1L;
 
 	@Id

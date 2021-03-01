@@ -20,7 +20,7 @@ public class Notification implements Serializable {
 	@Column(name= "id")
 	private int idnotification;
 	
-	@Column(name="Notification Text")
+	@Column(name="Notification_Text")
 	private String notiftext;
 
 	public Notification() {

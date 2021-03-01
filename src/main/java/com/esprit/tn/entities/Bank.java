@@ -1,15 +1,12 @@
 package com.esprit.tn.entities;
 
 import java.io.Serializable;
-import java.util.Set;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 
@@ -27,11 +24,10 @@ public class Bank implements Serializable {
 	@Column(name="Name")
 	private String name;
 	
-	@Column(name="Interest Rate")
+	@Column(name="Interest_Rate")
 	private float interestrate;
 
-	@OneToMany(cascade= CascadeType.ALL, mappedBy= "Bank")
-	private Set<Offer> Offers;
+
 	
 	
 	public Bank() {

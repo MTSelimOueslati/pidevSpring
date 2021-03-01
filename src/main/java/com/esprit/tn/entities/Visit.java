@@ -9,8 +9,6 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -25,17 +23,13 @@ public class Visit implements Serializable {
 	private int idVisit;
 	
 	@Temporal(TemporalType.DATE)
-	@Column(name="Visit Date")
+	@Column(name="Visit_Date")
 	private Date visitdate;
 	
-	@Column(name="Visit Type")
+	@Column(name="Visit_Type")
 	@Enumerated(EnumType.STRING)
 	private VisitType visitType;
 
-	@ManyToOne
-	@JoinColumn(name= "idAd")
-	private Ad ad;
-	
 	public Visit() {
 		super();
 	}

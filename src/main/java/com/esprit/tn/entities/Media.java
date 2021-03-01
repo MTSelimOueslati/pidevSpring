@@ -9,8 +9,6 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 @Entity
 @Table(name= "Media")
@@ -23,13 +21,11 @@ public class Media implements Serializable {
 	@Column(name= "id")
 	private int idMedia;
 	
-	@Column(name="Media Type")
+	@Column(name="Media_Type")
 	@Enumerated(EnumType.STRING)
 	private MediaType mediatype;
 
-	@ManyToOne
-	@JoinColumn(name = "idAd", referencedColumnName = "Ad", insertable = false, updatable = false)
-	private Ad ad;
+
 	
 	
 	public Media() {

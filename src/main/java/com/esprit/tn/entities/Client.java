@@ -12,7 +12,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name= "Clients")
-public class Client extends User implements Serializable {
+public class Client implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -21,7 +21,7 @@ public class Client extends User implements Serializable {
 	@Column(name= "id")
 	private int idClient;	
 	
-	@Column(name="Phone Number")
+	@Column(name="Phone_Number")
 	private int phone;
 	
 	@Column(name="Address")
