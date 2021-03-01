@@ -17,7 +17,7 @@ import javax.persistence.OneToMany;
 public class Ad implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
-//aze
+
 	
 	@Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
