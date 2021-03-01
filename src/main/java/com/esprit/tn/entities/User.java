@@ -7,10 +7,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name= "User")
+@Table(name= "Users")
 public class User implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -27,7 +29,9 @@ public class User implements Serializable {
 	private String Login;
 	@Column(name= "Password")
 	private String Password;
-	
+	@ManyToOne
+	@JoinColumn(name= "id_role")
+	private Role role;
 	
 	
 	
