@@ -9,7 +9,10 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 @Entity
@@ -22,7 +25,7 @@ public class Ad implements Serializable {
 	@Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
 	@Column(name= "id")
-	private int idAd;
+	private int id;
 	
 	@Column(name="ad")
 	private String ad;
@@ -41,7 +44,7 @@ public class Ad implements Serializable {
 	private String location;
 	
 	@Column(name="Area")
-	private String area;
+	private int area;
 	
 	@Column(name="NbRooms")
 	private int nbrooms;
@@ -64,12 +67,15 @@ public class Ad implements Serializable {
 	@Column(name="Furnished")
 	private boolean furnished;
 	
-	private User user;
+	
 	
 	@Column(name="State")
 	@Enumerated(EnumType.STRING)
 	private State state;
 
+	/*@JsonIgnore
+	@ManyToOne
+	private Client client;*/
 
 	
 	public Ad() {
@@ -78,11 +84,11 @@ public class Ad implements Serializable {
 
 	
 	
-	public Ad(int idAd, AdType adType, String description, float price, String location, String area, int nbrooms,
-			int nbbath, int nbgarage, boolean garden, boolean elevator, boolean pool, boolean furnished, User user,
+	public Ad(int idAd, AdType adType, String description, float price, String location, int area, int nbrooms,
+			int nbbath, int nbgarage, boolean garden, boolean elevator, boolean pool, boolean furnished,
 			State state) {
 		super();
-		this.idAd = idAd;
+		this.id = idAd;
 		this.adType = adType;
 		this.description = description;
 		this.price = price;
@@ -95,7 +101,6 @@ public class Ad implements Serializable {
 		this.elevator = elevator;
 		this.pool = pool;
 		this.furnished = furnished;
-		this.user = user;
 		this.state = state;
 	}
 
@@ -103,8 +108,8 @@ public class Ad implements Serializable {
 
 	
 	
-	public Ad(AdType adType, String description, float price, String location, String area, int nbrooms, int nbbath,
-			int nbgarage, boolean garden, boolean elevator, boolean pool, boolean furnished, User user, State state) {
+	public Ad(AdType adType, String description, float price, String location, int area, int nbrooms, int nbbath,
+			int nbgarage, boolean garden, boolean elevator, boolean pool, boolean furnished, State state) {
 		super();
 		this.adType = adType;
 		this.description = description;
@@ -118,18 +123,18 @@ public class Ad implements Serializable {
 		this.elevator = elevator;
 		this.pool = pool;
 		this.furnished = furnished;
-		this.user = user;
+		
 		this.state = state;
 	}
 
 
 
-	public int getIdAd() {
-		return idAd;
+	public int getId() {
+		return id;
 	}
 
-	public void setIdAd(int idAd) {
-		this.idAd = idAd;
+	public void setId(int idAd) {
+		this.id = idAd;
 	}
 
 	public AdType getAdType() {
@@ -164,11 +169,11 @@ public class Ad implements Serializable {
 		this.location = location;
 	}
 
-	public String getArea() {
+	public int getArea() {
 		return area;
 	}
 
-	public void setArea(String area) {
+	public void setArea(int area) {
 		this.area = area;
 	}
 
@@ -228,13 +233,6 @@ public class Ad implements Serializable {
 		this.furnished = furnished;
 	}
 
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
-	}
 
 	public State getState() {
 		return state;
@@ -246,10 +244,10 @@ public class Ad implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Ad [idAd=" + idAd + ", adType=" + adType + ", description=" + description + ", price=" + price
+		return "Ad [idAd=" + id + ", adType=" + adType + ", description=" + description + ", price=" + price
 				+ ", location=" + location + ", area=" + area + ", nbrooms=" + nbrooms + ", nbbath=" + nbbath
 				+ ", nbgarage=" + nbgarage + ", garden=" + garden + ", elevator=" + elevator + ", pool=" + pool
-				+ ", furnished=" + furnished + ", user=" + user + ", state=" + state + "]";
+				+ ", furnished=" + furnished + ", state=" + state + "]";
 	}
 	
 	
