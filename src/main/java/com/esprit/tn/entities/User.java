@@ -42,7 +42,8 @@ public class User implements Serializable , UserDetails  {
 	private String password;
 	private String address;
 	private boolean verified;
-
+	private boolean subscribed;
+	private String idStrype;
 	
 	@ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
 	@JsonIgnore
@@ -77,6 +78,18 @@ public class User implements Serializable , UserDetails  {
 	@OneToMany(cascade = CascadeType.PERSIST,mappedBy="user",fetch=FetchType.LAZY)
 	//@JsonManagedReference
 	private Set<Reclamation> reclamations;
+
+	
+	
+	
+	
+	public String getIdStrype() {
+		return idStrype;
+	}
+
+	public void setIdStrype(String idStrype) {
+		this.idStrype = idStrype;
+	}
 
 	/**
 	 * @return the userId
@@ -224,6 +237,14 @@ public class User implements Serializable , UserDetails  {
 	 */
 	public void setVerified(boolean verified) {
 		this.verified = verified;
+	}
+
+	public boolean isSubscribed() {
+		return subscribed;
+	}
+
+	public void setSubscribed(boolean subscribed) {
+		this.subscribed = subscribed;
 	}
 	
 	

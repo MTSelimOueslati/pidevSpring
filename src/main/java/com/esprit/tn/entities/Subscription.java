@@ -34,12 +34,13 @@ private static final long serialVersionUID = 1L;
 	private float offer;
 	
 	@Temporal(TemporalType.DATE)
-	@Column(name="Expiration_Date")
-	private Date expirationdate;
+	Date startDate;
+	@Temporal(TemporalType.DATE)
+	Date endDate;
 	
 	@Column(name="Subscription_Type")
-	@Enumerated(EnumType.STRING)
-	private SubType subtype;
+
+	String subtype;
 	
 	/*@OneToMany(cascade = CascadeType.PERSIST,mappedBy="subscription",fetch=FetchType.LAZY)
 	//@JsonManagedReference
@@ -49,20 +50,7 @@ private static final long serialVersionUID = 1L;
 		super();
 	}
 
-	public Subscription(int idsubscription, float offer, Date expirationdate, SubType subtype) {
-		super();
-		this.idsubscription = idsubscription;
-		this.offer = offer;
-		this.expirationdate = expirationdate;
-		this.subtype = subtype;
-	}
 
-	public Subscription(float offer, Date expirationdate, SubType subtype) {
-		super();
-		this.offer = offer;
-		this.expirationdate = expirationdate;
-		this.subtype = subtype;
-	}
 
 	public int getIdsubscription() {
 		return idsubscription;
@@ -80,27 +68,51 @@ private static final long serialVersionUID = 1L;
 		this.offer = offer;
 	}
 
-	public Date getExpirationdate() {
-		return expirationdate;
-	}
 
-	public void setExpirationdate(Date expirationdate) {
-		this.expirationdate = expirationdate;
-	}
 
-	public SubType getSubtype() {
+	public String getSubtype() {
 		return subtype;
 	}
 
-	public void setSubtype(SubType subtype) {
+	public void setSubtype(String subtype) {
 		this.subtype = subtype;
 	}
 
-	@Override
-	public String toString() {
-		return "Subscription [idsubscription=" + idsubscription + ", offer=" + offer + ", expirationdate="
-				+ expirationdate + ", subtype=" + subtype + "]";
+
+
+	public Date getStartDate() {
+		return startDate;
 	}
+
+
+
+	public void setStartDate(Date startDate) {
+		this.startDate = startDate;
+	}
+
+
+
+	public Date getEndDate() {
+		return endDate;
+	}
+
+
+
+	public void setEndDate(Date endDate) {
+		this.endDate = endDate;
+	}
+
+
+
+	public Subscription(float offer, Date startDate, Date endDate, String subtype) {
+		super();
+		this.offer = offer;
+		this.startDate = startDate;
+		this.endDate = endDate;
+		this.subtype = subtype;
+	}
+
+
 	
 	
 }
