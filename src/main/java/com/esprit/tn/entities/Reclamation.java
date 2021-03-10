@@ -1,13 +1,21 @@
 package com.esprit.tn.entities;
 
 import java.io.Serializable;
+import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 @Entity
 @Table(name= "Reclamations")
 public class Reclamation implements Serializable{
@@ -29,6 +37,13 @@ public class Reclamation implements Serializable{
 		super();
 	}
 
+
+	 @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)        
+	 @JsonIgnore                                                              
+	 @JsonBackReference                                                       
+	 private User user;                                                       
+	 		                                                                 
+	
 	public Reclamation(int idreclamation, String subject, String description) {
 		super();
 		this.idreclamation = idreclamation;

@@ -1,4 +1,4 @@
-package com.esprit.tn.controllers;
+/*package com.esprit.tn.controllers;
 
 import java.util.List;
 
@@ -46,3 +46,4 @@ public class AdContoller {
         return AdServiceImpl.getAllAds();
     }
 }
+*/

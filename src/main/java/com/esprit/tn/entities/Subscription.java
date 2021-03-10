@@ -1,21 +1,26 @@
 package com.esprit.tn.entities;
 
-import java.io.Serializable;
 import java.util.Date;
+import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+
 @Entity
 @Table(name= "Subscriptions")
-public class Subscription implements Serializable{
+public class Subscription {
+
 	
 private static final long serialVersionUID = 1L;
 
@@ -35,6 +40,10 @@ private static final long serialVersionUID = 1L;
 	@Column(name="Subscription_Type")
 	@Enumerated(EnumType.STRING)
 	private SubType subtype;
+	
+	/*@OneToMany(cascade = CascadeType.PERSIST,mappedBy="subscription",fetch=FetchType.LAZY)
+	//@JsonManagedReference
+	private Set<User> user;*/
 
 	public Subscription() {
 		super();

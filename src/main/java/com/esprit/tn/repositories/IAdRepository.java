@@ -1,4 +1,4 @@
-package com.esprit.tn.repositories;
+/*package com.esprit.tn.repositories;
 
 import javax.transaction.Transactional;
 
@@ -23,3 +23,4 @@ public interface IAdRepository extends CrudRepository<Ad,Integer >{
 
 
 }
+*/

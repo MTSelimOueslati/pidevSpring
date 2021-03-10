@@ -1,4 +1,4 @@
-package com.esprit.tn.services;
+/*package com.esprit.tn.services;
 
 import java.util.List;
 
@@ -17,3 +17,4 @@ public interface IAdService {
 	
 
 }
+*/

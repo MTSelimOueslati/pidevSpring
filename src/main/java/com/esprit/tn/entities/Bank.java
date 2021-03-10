@@ -1,12 +1,16 @@
 package com.esprit.tn.entities;
 
 import java.io.Serializable;
+import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 
@@ -23,10 +27,15 @@ public class Bank implements Serializable {
 	
 	@Column(name="Name")
 	private String name;
-	
-	@Column(name="Interest_Rate")
-	private float interestrate;
 
+	@OneToMany(cascade = CascadeType.PERSIST,mappedBy="user",fetch=FetchType.LAZY)
+	//@JsonManagedReference
+	private Set<Offer> offers;
+	
+	
+	
+	
+	
 
 	
 	
@@ -34,17 +43,17 @@ public class Bank implements Serializable {
 		super();
 	}
 
-	public Bank(int idBank, String name, float interestrate) {
+	public Bank(String name, Set<Offer> offers) {
 		super();
-		this.idBank = idBank;
 		this.name = name;
-		this.interestrate = interestrate;
+		this.offers = offers;
 	}
 
-	public Bank(String name, float interestrate) {
+	
+
+	public Bank(String name) {
 		super();
 		this.name = name;
-		this.interestrate = interestrate;
 	}
 
 	public int getIdBank() {
@@ -63,17 +72,11 @@ public class Bank implements Serializable {
 		this.name = name;
 	}
 
-	public float getInterestrate() {
-		return interestrate;
-	}
-
-	public void setInterestrate(float interestrate) {
-		this.interestrate = interestrate;
-	}
+	
 
 	@Override
 	public String toString() {
-		return "Bank [idBank=" + idBank + ", name=" + name + ", interestrate=" + interestrate + "]";
+		return "Bank [idBank=" + idBank + ", name=" + name + "]";
 	}
 	
 	

@@ -1,77 +1,68 @@
 package com.esprit.tn.entities;
 
-import java.io.Serializable;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.persistence.Table;
 
-@Entity
-@Table(name= "Role")
-public class Role implements Serializable{
-	
-	private static final long serialVersionUID = 1L;
-	
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+@Entity(name="role")
+public class Role {
 	@Id
-	@GeneratedValue(strategy= GenerationType.IDENTITY)
-	@Column(name="id")
-	private int idRole;
-	@Column(name="description")
-	private String description;
-	@Enumerated(EnumType.STRING)
-	@Column(name="roleType")
-	private RoleType roleType;
-	@OneToMany(cascade= CascadeType.ALL, mappedBy="role", fetch= FetchType.EAGER)
-	private Set<User> user;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int roleId;
+	private String roleName;
 	
-	public Role() {
-		super();
+	@OneToMany(cascade = CascadeType.PERSIST,mappedBy="role",fetch=FetchType.LAZY)
+	//@JsonManagedReference
+	private Set<User> users;
+
+	/**
+	 * @return the roleId
+	 */
+	public int getRoleId() {
+		return roleId;
 	}
 
-	public int getIdRole() {
-		return idRole;
+	/**
+	 * @param roleId the roleId to set
+	 */
+	public void setRoleId(int roleId) {
+		this.roleId = roleId;
 	}
 
-	public void setIdRole(int idRole) {
-		this.idRole = idRole;
+	/**
+	 * @return the roleName
+	 */
+	public String getRoleName() {
+		return roleName;
 	}
 
-	public String getDescription() {
-		return description;
+	/**
+	 * @param roleName the roleName to set
+	 */
+	public void setRoleName(String roleName) {
+		this.roleName = roleName;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	/**
+	 * @return the users
+	 */
+	public Set<User> getUsers() {
+		return users;
 	}
 
-	public RoleType getRoleType() {
-		return roleType;
+	/**
+	 * @param users the users to set
+	 */
+	public void setUsers(Set<User> users) {
+		this.users = users;
 	}
-
-	public void setRoleType(RoleType roleType) {
-		this.roleType = roleType;
-	}
-
-	public Set<User> getUser() {
-		return user;
-	}
-
-	public void setUser(Set<User> user) {
-		this.user = user;
-	}
-
-	@Override
-	public String toString() {
-		return "Role [idRole=" + idRole + ", description=" + description + ", roleType=" + roleType + ", user=" + user
-				+ "]";
-	}
+	
 }
