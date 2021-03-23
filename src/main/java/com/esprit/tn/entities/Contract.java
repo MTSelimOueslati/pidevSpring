@@ -2,7 +2,6 @@ package com.esprit.tn.entities;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -13,8 +12,6 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -22,10 +19,12 @@ import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+@JsonIgnoreProperties({"hibernateLazyInitializer"})
 
 @Entity
-@Table(name= "Contracts")
+@Table(name= "Contract")
 public class Contract implements Serializable{
 
 	private static final long serialVersionUID = 1L;
@@ -37,7 +36,7 @@ public class Contract implements Serializable{
 	
 	@Column(name="Contract_Type")
 	@Enumerated(EnumType.STRING)
-	private ContractType contracttype;
+	private ContractType type;
 
 	@Column(name="Buyer")
 	private String buyer;
@@ -57,7 +56,6 @@ public class Contract implements Serializable{
 
 	
 	@ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
-	@JsonIgnore
 	@JsonBackReference
 	private User user;
 	
@@ -68,30 +66,7 @@ public class Contract implements Serializable{
 
 
 
-	public Contract(int id, ContractType contracttype, String buyer, String seller, float sum, String address,
-			Date date) {
-		super();
-		this.id = id;
-		this.contracttype = contracttype;
-		this.buyer = buyer;
-		this.seller = seller;
-		this.sum = sum;
-		this.address = address;
-		this.date = date;
-	}
-
-
-
-
-	public Contract(ContractType contracttype, String buyer, String seller, float sum, String address, Date date) {
-		super();
-		this.contracttype = contracttype;
-		this.buyer = buyer;
-		this.seller = seller;
-		this.sum = sum;
-		this.address = address;
-		this.date = date;
-	}
+	
 
 
 
@@ -116,22 +91,29 @@ public class Contract implements Serializable{
 
 
 
-	/**
-	 * @return the contracttype
-	 */
-	public ContractType getContracttype() {
-		return contracttype;
+
+
+
+	public ContractType getType() {
+		return type;
 	}
 
 
 
 
-	/**
-	 * @param contracttype the contracttype to set
-	 */
-	public void setContracttype(ContractType contracttype) {
-		this.contracttype = contracttype;
+
+
+
+
+
+	public void setType(ContractType type) {
+		this.type = type;
 	}
+
+
+
+
+
 
 
 
@@ -231,6 +213,30 @@ public class Contract implements Serializable{
 	 */
 	public void setDate(Date date) {
 		this.date = date;
+	}
+
+
+
+
+
+
+
+
+
+	public User getUser() {
+		return user;
+	}
+
+
+
+
+
+
+
+
+
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 	

@@ -1,23 +1,29 @@
 package com.esprit.tn.controllers;
 
+import java.io.IOException;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.esprit.tn.entities.ConfirmationToken;
 import com.esprit.tn.entities.Role;
 import com.esprit.tn.entities.User;
+import com.esprit.tn.entities.util.FileUploadUtil;
 import com.esprit.tn.entities.util.UserForm;
 import com.esprit.tn.repositories.ConfirmationTokenRepository;
 import com.esprit.tn.repositories.UserRepository;
 import com.esprit.tn.services.RoleService;
 import com.esprit.tn.services.UserService;
+
 
 @RestController
 @RequestMapping("/users")
@@ -37,11 +43,22 @@ public class UserController {
 	
 
 	@PostMapping("/Signup")
-	public User register(@RequestBody UserForm a) {
+	public User register(@RequestBody UserForm a)/*, @RequestParam("documents") MultipartFile multipartFile) throws IOException*/ {
+		
+		//String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
+    	//a.setDocuments(fileName);
+		
 		User user = userservice.addSimpleUser(a);
+		
 		ConfirmationToken confirmationToken = new ConfirmationToken(user);
 
 		confirmationTokenRepository.save(confirmationToken);
+		
+
+		//String uploadDir = "user-documents/" + user.getUserId();
+		 
+      //  FileUploadUtil.saveFile(uploadDir, fileName, multipartFile);
+		
 		/*SimpleMailMessage mailMessage = new SimpleMailMessage();
 		mailMessage.setTo(appUser.getEmail());
 		mailMessage.setSubject("Complete Registration!");
@@ -53,19 +70,19 @@ public class UserController {
 	}
 
 
-	/*@PostMapping("confirm-account")
+	@PostMapping("confirm-account")
 	public void confirmUserAccount(@RequestParam("token") String confirmationToken) {
 		ConfirmationToken token = confirmationTokenRepository.findByConfirmationToken(confirmationToken);
 
 		if (token != null) {
-			User user = userRep.findUserByName(token.getUser().getName());
+			User user = userRep.findByName(token.getUser().getName());
 			UserForm af = new UserForm();
-			af.setEmail(user.getEmail());
+		//	af.setEmail(user.getEmail());
 			af.setVerified(true);
-			UserService.updateUser(af);
+			userservice.updateUser(af);
 		}
 
-	}*/
+	}
 
 	@PostMapping("/addRole")
 	public Role addRole(@RequestBody Role r) 

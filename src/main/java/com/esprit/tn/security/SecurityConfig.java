@@ -15,16 +15,20 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.security.web.authentication.Http403ForbiddenEntryPoint;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.authentication.logout.SimpleUrlLogoutSuccessHandler;
+import org.springframework.security.config.http.SessionCreationPolicy;
 
 import com.esprit.tn.controllers.AppAuthProvider;
 import com.esprit.tn.services.UserService;
+
 
 @Configuration
 @EnableWebSecurity
@@ -49,7 +53,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
     }
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf()
+    	http.csrf().disable();
+    	http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+    	http.authorizeRequests().anyRequest().permitAll();
+    	http.addFilter(new JWTAuthenticationFilter(authenticationManager()));
+    	http.addFilterBefore(new JWTAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class);
+        /*http.csrf()
                 .disable()
                 .exceptionHandling()
                 .authenticationEntryPoint(new Http403ForbiddenEntryPoint() {
@@ -70,7 +79,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
                 .antMatchers("/login").permitAll()
                 .antMatchers("/logout").permitAll()
                 .antMatchers("/user").authenticated()
-                .anyRequest().permitAll();
+                .anyRequest().permitAll();*/
     }
     private class AuthentificationLoginSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
         @Override
@@ -97,6 +106,7 @@ private class AuthentificationLogoutSuccessHandler extends SimpleUrlLogoutSucces
         provider.setUserDetailsService(UserDetailsService);
         return provider;
     }
+
 
 
 }

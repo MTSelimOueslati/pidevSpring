@@ -14,6 +14,8 @@ import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 
 @Entity
 public class ConfirmationToken {
@@ -27,8 +29,11 @@ public class ConfirmationToken {
 
 	    @Temporal(TemporalType.TIMESTAMP)
 	    private Date createdDate;
+	    
+	    
 
 	    @OneToOne(targetEntity = User.class, fetch = FetchType.EAGER)
+		@JsonManagedReference
 	    @JoinColumn(nullable = false, name = "userId")
 	    private User user;
 

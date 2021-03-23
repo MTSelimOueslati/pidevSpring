@@ -22,7 +22,7 @@ import javax.persistence.TemporalType;
 public class Subscription {
 
 	
-private static final long serialVersionUID = 1L;
+//private static final long serialVersionUID = 1L;
 
 	
 	@Id

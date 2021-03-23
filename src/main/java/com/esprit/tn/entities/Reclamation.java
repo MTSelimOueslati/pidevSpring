@@ -17,7 +17,7 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 @Entity
-@Table(name= "Reclamations")
+@Table(name= "Reclamation")
 public class Reclamation implements Serializable{
 
 	private static final long serialVersionUID = 1L;

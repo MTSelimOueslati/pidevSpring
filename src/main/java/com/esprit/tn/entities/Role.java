@@ -20,7 +20,7 @@ public class Role {
 	private String roleName;
 	
 	@OneToMany(cascade = CascadeType.PERSIST,mappedBy="role",fetch=FetchType.LAZY)
-	//@JsonManagedReference
+	@JsonManagedReference
 	private Set<User> users;
 
 	/**

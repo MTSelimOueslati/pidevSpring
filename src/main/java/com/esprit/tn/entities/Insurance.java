@@ -15,7 +15,7 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 @Entity
-@Table(name= "Insurances")
+@Table(name= "Insurance")
 public class Insurance implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -33,10 +33,10 @@ public class Insurance implements Serializable {
 	private String website;
 
 
-    @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
+ /*   @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
     @JsonIgnore
     @JsonBackReference  
-    private User user; 
+    private User user; */
     
 	public Insurance() {
 		super();

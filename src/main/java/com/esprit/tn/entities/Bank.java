@@ -15,7 +15,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name= "Banks")
+@Table(name= "Bank")
 public class Bank implements Serializable {
 
 	private static final long serialVersionUID = 1L;

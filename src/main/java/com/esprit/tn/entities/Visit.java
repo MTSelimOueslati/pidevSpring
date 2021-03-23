@@ -13,7 +13,7 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 @Entity
-@Table(name= "Visits")
+@Table(name= "Visit")
 public class Visit implements Serializable {
 	private static final long serialVersionUID = 1L;
 	

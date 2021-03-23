@@ -1,5 +1,9 @@
 package com.esprit.tn.entities.util;
 
+import javax.persistence.Column;
+
+import org.springframework.data.annotation.Transient;
+
 public class UserForm {
 	private String name;
 	private int phone_number;
@@ -7,7 +11,6 @@ public class UserForm {
 	private String password;
 	private String address;
 	private boolean verified;
-
 	
 	public UserForm() {
 		super();
@@ -78,5 +81,6 @@ public class UserForm {
 	public void setVerified(boolean verified) {
 		this.verified = verified;
 	}
+
 	
 }

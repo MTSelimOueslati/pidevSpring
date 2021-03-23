@@ -11,10 +11,9 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -22,6 +21,11 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+
+@JsonIgnoreProperties({"hibernateLazyInitializer"})
 
 @Entity(name="user")
 public class User implements Serializable , UserDetails  {
@@ -44,23 +48,29 @@ public class User implements Serializable , UserDetails  {
 	private boolean verified;
 	private boolean subscribed;
 	private String idStrype;
+	//@Column(nullable = true, length = 64)
+	//private String documents;
 	
 	@ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
-	@JsonIgnore
-	@JsonBackReference
+	@JsonIgnoreProperties(ignoreUnknown = true, value = {"user"})
 	private Role role;
 	
 
 	@OneToMany(cascade = CascadeType.PERSIST,mappedBy="user",fetch=FetchType.LAZY)
-	//@JsonManagedReference
+	@JsonIgnoreProperties(ignoreUnknown = true, value = {"user"})
 	private Set<Ad> ads;
 	
-	@OneToMany(cascade = CascadeType.PERSIST,mappedBy="user",fetch=FetchType.LAZY)
+	@OneToOne(cascade = CascadeType.ALL, mappedBy = "user")
+	@JsonManagedReference
+	private Documents documents;
+	
+	
+	/*@OneToMany(cascade = CascadeType.PERSIST,mappedBy="user",fetch=FetchType.LAZY)
 	//@JsonManagedReference
-	private Set<Insurance> insurances;
+	private Set<Insurance> insurances;*/
 	
 	@OneToMany(cascade = CascadeType.PERSIST,mappedBy="user",fetch=FetchType.LAZY)
-	//@JsonManagedReference
+	@JsonIgnoreProperties(ignoreUnknown = true, value = {"user"})
 	private Set<Offer> offers;
 /*	
 	@ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
@@ -71,12 +81,12 @@ public class User implements Serializable , UserDetails  {
 	
 
 	@OneToMany(cascade = CascadeType.PERSIST,mappedBy="user",fetch=FetchType.LAZY)
-	//@JsonManagedReference
+	@JsonManagedReference
 	private Set<Contract> contracts;
 	
 	
 	@OneToMany(cascade = CascadeType.PERSIST,mappedBy="user",fetch=FetchType.LAZY)
-	//@JsonManagedReference
+	@JsonIgnoreProperties(ignoreUnknown = true, value = {"user"})
 	private Set<Reclamation> reclamations;
 
 	
@@ -246,8 +256,15 @@ public class User implements Serializable , UserDetails  {
 	public void setSubscribed(boolean subscribed) {
 		this.subscribed = subscribed;
 	}
-	
-	
-	
+
+	public Documents getDocuments() {
+		return documents;
+	}
+
+	public void setDocuments(Documents documents) {
+		this.documents = documents;
+	}
+
+
 
 }
