@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.Lob;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -27,16 +28,20 @@ public class Documents implements Serializable {
 	
 	
 	@Column(name="fichedepaie")
-	private String fichedepaie;
+	@Lob
+    private byte[]fichedepaie;
 	
 	@Column(name="piecedidentite")
-	private String piecedidentite;
+	@Lob
+    private byte[] piecedidentite;
 	
 	@Column(name="lettredengagement")
-	private String lettredengagement;
+	@Lob
+    private byte[] lettredengagement;
 	
 	@Column(name="cautionnement")
-	private String cautionnement;
+	@Lob
+    private byte[] cautionnement;
 	
 	@OneToOne
 	@JsonBackReference
@@ -52,37 +57,7 @@ public class Documents implements Serializable {
 		this.id = id;
 	}
 
-	public String getFichedepaie() {
-		return fichedepaie;
-	}
-
-	public void setFichedepaie(String fichedepaie) {
-		this.fichedepaie = fichedepaie;
-	}
-
-	public String getPiecedidentite() {
-		return piecedidentite;
-	}
-
-	public void setPiecedidentite(String piecedidentite) {
-		this.piecedidentite = piecedidentite;
-	}
-
-	public String getLettredengagement() {
-		return lettredengagement;
-	}
-
-	public void setLettredengagement(String lettredengagement) {
-		this.lettredengagement = lettredengagement;
-	}
-
-	public String getCautionnement() {
-		return cautionnement;
-	}
-
-	public void setCautionnement(String cautionnement) {
-		this.cautionnement = cautionnement;
-	}
+	
 
 	public User getUser() {
 		return user;
@@ -92,17 +67,54 @@ public class Documents implements Serializable {
 		this.user = user;
 	}
 	
-	public Documents(String fichedepaie, String piecedidentite, String lettredengagement, String cautionnement) {
+
+
+
+	
+	public byte[] getFichedepaie() {
+		return fichedepaie;
+	}
+
+	public void setFichedepaie(byte[] fichedepaie) {
+		this.fichedepaie = fichedepaie;
+	}
+
+	public byte[] getPiecedidentite() {
+		return piecedidentite;
+	}
+
+	public void setPiecedidentite(byte[] piecedidentite) {
+		this.piecedidentite = piecedidentite;
+	}
+
+	public byte[] getLettredengagement() {
+		return lettredengagement;
+	}
+
+	public void setLettredengagement(byte[] lettredengagement) {
+		this.lettredengagement = lettredengagement;
+	}
+
+	public byte[] getCautionnement() {
+		return cautionnement;
+	}
+
+	public void setCautionnement(byte[] cautionnement) {
+		this.cautionnement = cautionnement;
+	}
+
+	public Documents() {
+		super();
+	}
+
+	public Documents(byte[] fichedepaie, byte[] piecedidentite, byte[] lettredengagement, byte[] cautionnement,
+			User user) {
 		super();
 		this.fichedepaie = fichedepaie;
 		this.piecedidentite = piecedidentite;
 		this.lettredengagement = lettredengagement;
 		this.cautionnement = cautionnement;
-	}
-
-	
-	public Documents() {
-		super();
+		this.user = user;
 	}
 
 

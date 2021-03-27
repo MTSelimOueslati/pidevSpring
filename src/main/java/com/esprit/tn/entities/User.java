@@ -48,8 +48,7 @@ public class User implements Serializable , UserDetails  {
 	private boolean verified;
 	private boolean subscribed;
 	private String idStrype;
-	//@Column(nullable = true, length = 64)
-	//private String documents;
+	
 	
 	@ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
 	@JsonIgnoreProperties(ignoreUnknown = true, value = {"user"})
@@ -65,19 +64,10 @@ public class User implements Serializable , UserDetails  {
 	private Documents documents;
 	
 	
-	/*@OneToMany(cascade = CascadeType.PERSIST,mappedBy="user",fetch=FetchType.LAZY)
-	//@JsonManagedReference
-	private Set<Insurance> insurances;*/
 	
 	@OneToMany(cascade = CascadeType.PERSIST,mappedBy="user",fetch=FetchType.LAZY)
 	@JsonIgnoreProperties(ignoreUnknown = true, value = {"user"})
 	private Set<Offer> offers;
-/*	
-	@ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
-	@JsonIgnore
-	@JsonBackReference
-	private Subscription sub;
-*/
 	
 
 	@OneToMany(cascade = CascadeType.PERSIST,mappedBy="user",fetch=FetchType.LAZY)
@@ -200,8 +190,8 @@ public class User implements Serializable , UserDetails  {
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		// TODO Auto-generated method stub
 		Collection<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
-		Role r = user.getRole();
-		authorities.add(new SimpleGrantedAuthority(r.getRoleName()));
+		//Role r = user.getRole();
+		authorities.add(new SimpleGrantedAuthority(user.getRole().getRoleName().name()));
 		return null;
 	}
 

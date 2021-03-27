@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,8 +13,13 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 
 import com.esprit.tn.entities.Documents;
 import com.esprit.tn.entities.util.FileUploadUtil;
@@ -31,9 +37,62 @@ public class DocumentsController {
 	@Autowired
 	UserRepository userrepo;
 	
+	ObjectMapper objectMapper = new ObjectMapper();
+	
+	@PostMapping(value="/add", consumes = {
+			MediaType.APPLICATION_JSON_VALUE,
+			MediaType.MULTIPART_FORM_DATA_VALUE
+	})  
+	private Documents adddocument(@RequestPart("evJson")String docsJson,
+			@RequestPart("fichedepaie") MultipartFile filefiche,
+			@RequestPart("piecedidentite") MultipartFile fileidentite,
+			@RequestPart("lettredengagement") MultipartFile filelettre,
+			@RequestPart("cautionnement") MultipartFile filecaut,
+			@RequestParam("userId") int userId)   
+	{  	
+		
+		Documents docs= new Documents();
+		String fileName1 = StringUtils.cleanPath(filefiche.getOriginalFilename());
+		String fileName2 = StringUtils.cleanPath(fileidentite.getOriginalFilename());
+		String fileName3 = StringUtils.cleanPath(filelettre.getOriginalFilename());
+		String fileName4 = StringUtils.cleanPath(filecaut.getOriginalFilename());
+		System.out.println("pay slip ="+fileName1);
+		System.out.println("identity ="+fileName2);
+		System.out.println("engagement lettre ="+fileName3);
+		System.out.println("bond ="+fileName4);
+		/*try {
+			docs= objectMapper.readValue(docsJson, Documents.class);
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}*/
+		String fileDownloadUri1 = ServletUriComponentsBuilder.fromCurrentContextPath().path("/uploads/")
+				.path(fileName1).toUriString();
+		System.out.println("file url =====>"+fileDownloadUri1);
+		docs.setFichedepaie(fileDownloadUri1.getBytes());
+		
+		String fileDownloadUri2 = ServletUriComponentsBuilder.fromCurrentContextPath().path("/uploads/")
+				.path(fileName2).toUriString();
+		System.out.println("file url =====>"+fileDownloadUri2);
+		docs.setPiecedidentite(fileDownloadUri2.getBytes());
+		
+		String fileDownloadUri3 = ServletUriComponentsBuilder.fromCurrentContextPath().path("/uploads/")
+				.path(fileName1).toUriString();
+		System.out.println("file url =====>"+fileDownloadUri3);
+		docs.setLettredengagement(fileDownloadUri3.getBytes());
+
+		String fileDownloadUri4 = ServletUriComponentsBuilder.fromCurrentContextPath().path("/uploads/")
+				.path(fileName1).toUriString();
+		System.out.println("file url =====>"+fileDownloadUri4);
+		docs.setCautionnement(fileDownloadUri4.getBytes());
+		
+		docserv.addDocuments(docs, userId);
+		return docs;  
+	}
 	
 	
 	
+/*	
 	@PostMapping("/add")
 	private Documents addDocuments(Documents docs,
 			@RequestParam("fichedepaie") MultipartFile fichedpaie, 
@@ -65,7 +124,7 @@ public class DocumentsController {
 		return docs;  
 		
 		
-	}  
+	}  */
 	
 	
 	@PutMapping("/update/{id}")

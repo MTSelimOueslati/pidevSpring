@@ -3,7 +3,10 @@ package com.esprit.tn.entities;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,7 +20,10 @@ public class Role {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int roleId;
-	private String roleName;
+	
+	@Column(name="RoleName")
+	@Enumerated(EnumType.STRING)
+	private RoleType roleName;
 	
 	@OneToMany(cascade = CascadeType.PERSIST,mappedBy="role",fetch=FetchType.LAZY)
 	@JsonManagedReference
@@ -40,14 +46,14 @@ public class Role {
 	/**
 	 * @return the roleName
 	 */
-	public String getRoleName() {
+	public RoleType getRoleName() {
 		return roleName;
 	}
 
 	/**
 	 * @param roleName the roleName to set
 	 */
-	public void setRoleName(String roleName) {
+	public void setRoleName(RoleType roleName) {
 		this.roleName = roleName;
 	}
 
