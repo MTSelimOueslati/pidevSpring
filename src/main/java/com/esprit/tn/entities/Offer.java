@@ -29,7 +29,7 @@ public class Offer implements Serializable {
 	private float intrestRate;
 	private float tex;
 	private float salaireMin;
-	
+	private int nmb;
 
     @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
     @JsonIgnore
@@ -41,6 +41,15 @@ public class Offer implements Serializable {
     @JsonIgnore
     @JsonBackReference  
     private Bank bank;
+	
+    
+    
+    public int getNmb() {
+		return nmb;
+	}
+	public void setNmbUsers(int nmb) {
+		this.nmb = nmb;
+	}
 	/**
 	 * @return the idOffer
 	 */
@@ -77,6 +86,10 @@ public class Offer implements Serializable {
 	public void setIntrestRate(float intrestRate) {
 		this.intrestRate = intrestRate;
 	}
+	
+	
+	
+	
 	/**
 	 * @return the tex
 	 */
@@ -95,6 +108,17 @@ public class Offer implements Serializable {
 	public float getSalaireMin() {
 		return salaireMin;
 	}
+	
+	
+	
+	
+	
+	public void setSalaireMin(float salaireMin) {
+		this.salaireMin = salaireMin;
+	}
+	
+	
+	
 	public Offer(int idOffer, String description, float intrestRate, float tex, float salaireMin) {
 		super();
 		this.idOffer = idOffer;

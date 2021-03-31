@@ -33,6 +33,10 @@ public class Reclamation implements Serializable{
 	@Column(name="Description")
 	private String description;
 
+	@Column(name="state")
+	private String state;
+	
+	
 	public Reclamation() {
 		super();
 	}
@@ -44,11 +48,13 @@ public class Reclamation implements Serializable{
 	 private User user;                                                       
 	 		                                                                 
 	
-	public Reclamation(int idreclamation, String subject, String description) {
+	public Reclamation(int idreclamation, String subject, String description, String state) {
 		super();
 		this.idreclamation = idreclamation;
 		this.subject = subject;
 		this.description = description;
+		this.state = state;
+	
 	}
 
 	public Reclamation(String subject, String description) {
@@ -79,6 +85,17 @@ public class Reclamation implements Serializable{
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	
+	
+	
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
 	}
 
 	@Override
