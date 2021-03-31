@@ -8,7 +8,7 @@ public interface IUserService {
 
 	User addAdmin(User a);
 	
-	public void deleteUser(int id);
+	public void deleteUser(long id);
 	
 	public User updateUser(UserForm a);
 

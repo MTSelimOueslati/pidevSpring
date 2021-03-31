@@ -23,9 +23,9 @@ public class ContractService implements IContractService {
 
 	
 	@Override
-	public Contract addContract(Contract c, int userid){
+	public Contract addContract(Contract c, long userid){
 		// TODO Auto-generated method stub
-		User user = userrep.findByUserId(userid);
+		User user = userrep.findById(userid).orElse(null);
 		c.setUser(user);
 		contractrepo.save(c);
 		return c;

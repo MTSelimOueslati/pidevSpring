@@ -76,7 +76,7 @@ public class SubscriptionController {
 		     user.setIdStrype(ola);;
 		
 		userrep.save(user);
-		user = userrep.findByUserId(user.getId());
+		user = userrep.findById(user.getId()).orElse(null);
 		user.setUsername(user.getUsername());
 		user.setPhone_number(user.getPhone_number());
 		user.setAddress(user.getAddress());
@@ -172,11 +172,11 @@ Stripe.apiKey="sk_test_51ITYUZKuxtPIEeD5lsPmKh2sG7jhzhhOpuBjXgXg4PL8cdjL79dL038v
 	
 	@PostMapping("/ActivateSubscription/{id}")
 	@ResponseBody
-	private int addSubsciption(@RequestBody Subscription subscription,@PathVariable("id") int userid)   
+	private int addSubsciption(@RequestBody Subscription subscription,@PathVariable("id") long userid)   
 	{  
-		String id = paymentserv.createCustomer(userrep.findByUserId(userid));
-		userrep.findByUserId(userid).setIdStrype(id);
-		userrep.save(userrep.findByUserId(userid));
+		String id = paymentserv.createCustomer(userrep.findById(userid).orElse(null));
+		userrep.findById(userid).orElse(null).setIdStrype(id);
+		userrep.save(userrep.findById(userid).orElse(null));
 		
 		subservice.ActivateSubscription(subscription,userid);
 		

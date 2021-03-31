@@ -60,12 +60,7 @@ public class DocumentsController {
 		System.out.println("identity ="+fileName2);
 		System.out.println("engagement lettre ="+fileName3);
 		System.out.println("bond ="+fileName4);
-		/*try {
-			docs= objectMapper.readValue(docsJson, Documents.class);
-			
-		} catch (IOException e) {
-			e.printStackTrace();
-		}*/
+
 		String fileDownloadUri1 = ServletUriComponentsBuilder.fromCurrentContextPath().path("/uploads/")
 				.path(fileName1).toUriString();
 		System.out.println("file url =====>"+fileDownloadUri1);
@@ -86,46 +81,12 @@ public class DocumentsController {
 		System.out.println("file url =====>"+fileDownloadUri4);
 		docs.setCautionnement(fileDownloadUri4.getBytes());
 		
-		//docserv.addDocuments(docs, userId);
 		docserv.addDocuments1(docs);
 		return docs;  
 	}
 	
 	
-	
-/*	
-	@PostMapping("/add")
-	private Documents addDocuments(Documents docs,
-			@RequestParam("fichedepaie") MultipartFile fichedpaie, 
-			@RequestParam("piecedidentite") MultipartFile ident, 
-			@RequestParam("lettredengagement") MultipartFile lettre, 
-			@RequestParam("cautionnement") MultipartFile caut, 
-			@RequestParam("userId") int userId)  throws IOException 
-	{  
-		
-		String filefiche = StringUtils.cleanPath(fichedpaie.getOriginalFilename());
-		docs.setFichedepaie(filefiche);
-		
-		String fileident = StringUtils.cleanPath(ident.getOriginalFilename());
-		docs.setPiecedidentite(fileident);
-		
-		String filelettre = StringUtils.cleanPath(lettre.getOriginalFilename());
-		docs.setLettredengagement(filelettre);
-		
-		String filecaut = StringUtils.cleanPath(caut.getOriginalFilename());
-		docs.setCautionnement(filecaut);
-		
-		docserv.addDocuments(docs,userId);
-		String uploadDir = "documents/" + docs.getId();
-		 
-        FileUploadUtil.saveFile(uploadDir, filefiche, fichedpaie);
-        FileUploadUtil.saveFile(uploadDir, fileident, ident);
-        FileUploadUtil.saveFile(uploadDir, filelettre, lettre);
-        FileUploadUtil.saveFile(uploadDir, filecaut, caut);
-		return docs;  
-		
-		
-	}  */
+
 	
 	
 	@PutMapping("/update/{id}")

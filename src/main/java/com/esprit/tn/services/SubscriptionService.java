@@ -23,9 +23,9 @@ public class SubscriptionService implements ISubscriptionService {
 	private UserRepository userrep;
 
 	@Override
-	public void ActivateSubscription(Subscription sub, int userid) {
+	public void ActivateSubscription(Subscription sub, long userid) {
 		// TODO Auto-generated method stub
-		User user=userrep.findByUserId(userid);
+		User user=userrep.findById(userid).orElse(null);
 		user.setSubscribed(true);
 		userrep.save(user);
 		sub.setStartDate(Date.from(Instant.now()));

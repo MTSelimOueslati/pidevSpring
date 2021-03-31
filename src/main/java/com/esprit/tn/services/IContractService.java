@@ -7,7 +7,7 @@ import com.esprit.tn.entities.ContractType;
 
 public interface IContractService {
 	
-	public Contract addContract(Contract c, int userid);
+	public Contract addContract(Contract c, long userid);
 
 	public Contract updateContract(Contract c, int id);
 	

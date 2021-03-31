@@ -37,9 +37,7 @@ public class UserService implements IUserService {
     
     @Override
     public User addSimpleUser(UserForm a) {
-		//if (userRep.findUserByName(a.getName()) != null)
-			//throw new RuntimeException("User already exists");
-		//Role r = roleRep.findByName("SIMPLE_USER");
+
 		User user = new User();
 		if (a.getAddress() != null) {
 			user.setAddress(a.getAddress());
@@ -95,8 +93,8 @@ public class UserService implements IUserService {
 	}
 
     @Override
-	public void deleteUser(int id) {
-		User user = userRep.findByUserId(id);
+	public void deleteUser(long id) {
+		User user = userRep.findById(id).orElse(null);
 		if (user == null)
 			throw new RuntimeException("User doesn't exists");
 		user.setRoles(null);

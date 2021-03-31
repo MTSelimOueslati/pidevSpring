@@ -45,8 +45,7 @@ public class UserController {
 	@PostMapping("/Signup")
 	public User register(@RequestBody UserForm a)/*, @RequestParam("documents") MultipartFile multipartFile) throws IOException*/ {
 		
-		//String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
-    	//a.setDocuments(fileName);
+
 		
 		User user = userservice.addSimpleUser(a);
 		
@@ -55,9 +54,6 @@ public class UserController {
 		confirmationTokenRepository.save(confirmationToken);
 		
 
-		//String uploadDir = "user-documents/" + user.getUserId();
-		 
-      //  FileUploadUtil.saveFile(uploadDir, fileName, multipartFile);
 		
 		/*SimpleMailMessage mailMessage = new SimpleMailMessage();
 		mailMessage.setTo(appUser.getEmail());

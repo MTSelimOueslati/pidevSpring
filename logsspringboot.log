@@ -4053,3 +4053,301 @@ Caused by: java.lang.IllegalStateException: Illegal attempt to dereference path 
 	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:91) ~[spring-data-jpa-2.4.5.jar:2.4.5]
 	... 120 common frames omitted
 
+2021-03-31 21:09:52.388  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Starting Pidev4Sae2Application using Java 1.8.0_241 on DESKTOP-K8H0JOM with PID 13196 (C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring\target\classes started by taieb in C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring)
+2021-03-31 21:09:52.411  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : No active profile set, falling back to default profiles: default
+2021-03-31 21:09:55.009  INFO 13196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-31 21:09:55.010  INFO 13196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-31 21:09:55.118  INFO 13196 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-03-31 21:09:55.225  WARN 13196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-31 21:09:55.428  INFO 13196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-31 21:09:55.474  INFO 13196 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-31 21:09:55.653  INFO 13196 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-31 21:09:56.434  INFO 13196 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-03-31 21:09:58.140  INFO 13196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-31 21:10:01.464  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Started Pidev4Sae2Application in 9.721 seconds (JVM running for 11.498)
+2021-03-31 21:15:22.299  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Starting Pidev4Sae2Application using Java 1.8.0_241 on DESKTOP-K8H0JOM with PID 13196 (C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring\target\classes started by taieb in C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring)
+2021-03-31 21:15:22.300  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : No active profile set, falling back to default profiles: default
+2021-03-31 21:15:22.993  INFO 13196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-31 21:15:22.993  INFO 13196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-31 21:15:23.019  INFO 13196 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-03-31 21:15:23.076  WARN 13196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-31 21:15:23.160  INFO 13196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-31 21:15:23.184  INFO 13196 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-03-31 21:15:23.491  INFO 13196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-31 21:15:24.240  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Started Pidev4Sae2Application in 1.99 seconds (JVM running for 334.275)
+2021-03-31 21:16:12.346  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Starting Pidev4Sae2Application using Java 1.8.0_241 on DESKTOP-K8H0JOM with PID 13196 (C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring\target\classes started by taieb in C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring)
+2021-03-31 21:16:12.346  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : No active profile set, falling back to default profiles: default
+2021-03-31 21:16:13.007  INFO 13196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-31 21:16:13.007  INFO 13196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-31 21:16:13.024  INFO 13196 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-03-31 21:16:13.084  WARN 13196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-31 21:16:13.164  INFO 13196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-31 21:16:13.177  INFO 13196 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-03-31 21:16:13.422  INFO 13196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-31 21:16:14.164  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Started Pidev4Sae2Application in 1.865 seconds (JVM running for 384.198)
+2021-03-31 21:18:55.305  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Starting Pidev4Sae2Application using Java 1.8.0_241 on DESKTOP-K8H0JOM with PID 13196 (C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring\target\classes started by taieb in C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring)
+2021-03-31 21:18:55.306  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : No active profile set, falling back to default profiles: default
+2021-03-31 21:18:55.969  INFO 13196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-31 21:18:55.970  INFO 13196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-31 21:18:55.993  INFO 13196 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-03-31 21:18:56.044  WARN 13196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-31 21:18:56.113  INFO 13196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-31 21:18:56.126  INFO 13196 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-03-31 21:18:56.398  INFO 13196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-31 21:18:57.180  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Started Pidev4Sae2Application in 1.92 seconds (JVM running for 547.214)
+2021-03-31 21:19:02.507  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Starting Pidev4Sae2Application using Java 1.8.0_241 on DESKTOP-K8H0JOM with PID 13196 (C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring\target\classes started by taieb in C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring)
+2021-03-31 21:19:02.508  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : No active profile set, falling back to default profiles: default
+2021-03-31 21:19:03.027  INFO 13196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-31 21:19:03.027  INFO 13196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-31 21:19:03.039  INFO 13196 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-03-31 21:19:03.069  WARN 13196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-31 21:19:03.134  INFO 13196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-31 21:19:03.146  INFO 13196 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-03-31 21:19:03.363  INFO 13196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-31 21:19:04.010  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Started Pidev4Sae2Application in 1.55 seconds (JVM running for 554.044)
+2021-03-31 21:21:36.818  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Starting Pidev4Sae2Application using Java 1.8.0_241 on DESKTOP-K8H0JOM with PID 13196 (C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring\target\classes started by taieb in C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring)
+2021-03-31 21:21:36.818  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : No active profile set, falling back to default profiles: default
+2021-03-31 21:21:37.308  INFO 13196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-31 21:21:37.308  INFO 13196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-31 21:21:37.319  INFO 13196 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-03-31 21:21:37.356  WARN 13196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-31 21:21:37.427  INFO 13196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-31 21:21:37.440  INFO 13196 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-03-31 21:21:37.674  INFO 13196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-31 21:21:38.338  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Started Pidev4Sae2Application in 1.553 seconds (JVM running for 708.373)
+2021-03-31 21:21:41.778  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Starting Pidev4Sae2Application using Java 1.8.0_241 on DESKTOP-K8H0JOM with PID 13196 (C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring\target\classes started by taieb in C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring)
+2021-03-31 21:21:41.779  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : No active profile set, falling back to default profiles: default
+2021-03-31 21:21:42.365  INFO 13196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-31 21:21:42.366  INFO 13196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-31 21:21:42.380  INFO 13196 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-03-31 21:21:42.436  WARN 13196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-31 21:21:42.505  INFO 13196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-31 21:21:42.518  INFO 13196 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-03-31 21:21:42.697  INFO 13196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-31 21:21:43.443  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Started Pidev4Sae2Application in 1.714 seconds (JVM running for 713.478)
+2021-03-31 21:21:52.844  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Starting Pidev4Sae2Application using Java 1.8.0_241 on DESKTOP-K8H0JOM with PID 13196 (C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring\target\classes started by taieb in C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring)
+2021-03-31 21:21:52.844  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : No active profile set, falling back to default profiles: default
+2021-03-31 21:21:53.478  INFO 13196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-31 21:21:53.479  INFO 13196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-31 21:21:53.489  INFO 13196 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-03-31 21:21:53.518  WARN 13196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-31 21:21:53.566  INFO 13196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-31 21:21:53.578  INFO 13196 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-03-31 21:21:53.779  INFO 13196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-31 21:21:54.631  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Started Pidev4Sae2Application in 1.832 seconds (JVM running for 724.665)
+2021-03-31 21:22:06.195  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Starting Pidev4Sae2Application using Java 1.8.0_241 on DESKTOP-K8H0JOM with PID 13196 (C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring\target\classes started by taieb in C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring)
+2021-03-31 21:22:06.196  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : No active profile set, falling back to default profiles: default
+2021-03-31 21:22:06.673  INFO 13196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-31 21:22:06.674  INFO 13196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-31 21:22:06.688  INFO 13196 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-03-31 21:22:06.749  WARN 13196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-31 21:22:06.819  INFO 13196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-31 21:22:06.831  INFO 13196 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-03-31 21:22:07.015  INFO 13196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-31 21:22:07.541  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Started Pidev4Sae2Application in 1.387 seconds (JVM running for 737.575)
+2021-03-31 21:22:10.746  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Starting Pidev4Sae2Application using Java 1.8.0_241 on DESKTOP-K8H0JOM with PID 13196 (C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring\target\classes started by taieb in C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring)
+2021-03-31 21:22:10.746  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : No active profile set, falling back to default profiles: default
+2021-03-31 21:22:11.367  INFO 13196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-31 21:22:11.368  INFO 13196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-31 21:22:11.379  INFO 13196 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-03-31 21:22:11.445  WARN 13196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-31 21:22:11.498  INFO 13196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-31 21:22:11.508  INFO 13196 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-03-31 21:22:11.725  INFO 13196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-31 21:22:12.470  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Started Pidev4Sae2Application in 1.761 seconds (JVM running for 742.504)
+2021-03-31 21:22:17.836  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Starting Pidev4Sae2Application using Java 1.8.0_241 on DESKTOP-K8H0JOM with PID 13196 (C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring\target\classes started by taieb in C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring)
+2021-03-31 21:22:17.837  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : No active profile set, falling back to default profiles: default
+2021-03-31 21:22:18.278  INFO 13196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-31 21:22:18.278  INFO 13196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-31 21:22:18.289  INFO 13196 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-03-31 21:22:18.318  WARN 13196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-31 21:22:18.375  INFO 13196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-31 21:22:18.386  INFO 13196 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-03-31 21:22:18.577  INFO 13196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-31 21:22:19.230  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Started Pidev4Sae2Application in 1.432 seconds (JVM running for 749.265)
+2021-03-31 21:24:07.487  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Starting Pidev4Sae2Application using Java 1.8.0_241 on DESKTOP-K8H0JOM with PID 13196 (C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring\target\classes started by taieb in C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring)
+2021-03-31 21:24:07.487  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : No active profile set, falling back to default profiles: default
+2021-03-31 21:24:08.053  INFO 13196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-31 21:24:08.054  INFO 13196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-31 21:24:08.071  INFO 13196 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-03-31 21:24:08.132  WARN 13196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-31 21:24:08.209  INFO 13196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-31 21:24:08.223  INFO 13196 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-03-31 21:24:08.414  INFO 13196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-31 21:24:09.113  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Started Pidev4Sae2Application in 1.664 seconds (JVM running for 859.147)
+2021-03-31 21:24:41.990  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Starting Pidev4Sae2Application using Java 1.8.0_241 on DESKTOP-K8H0JOM with PID 13196 (C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring\target\classes started by taieb in C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring)
+2021-03-31 21:24:41.991  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : No active profile set, falling back to default profiles: default
+2021-03-31 21:24:42.541  INFO 13196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-31 21:24:42.542  INFO 13196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-31 21:24:42.552  INFO 13196 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-03-31 21:24:42.584  WARN 13196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-31 21:24:42.646  INFO 13196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-31 21:24:42.658  INFO 13196 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-03-31 21:24:42.843  INFO 13196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-31 21:24:43.483  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Started Pidev4Sae2Application in 1.535 seconds (JVM running for 893.518)
+2021-03-31 21:25:20.378  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Starting Pidev4Sae2Application using Java 1.8.0_241 on DESKTOP-K8H0JOM with PID 13196 (C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring\target\classes started by taieb in C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring)
+2021-03-31 21:25:20.378  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : No active profile set, falling back to default profiles: default
+2021-03-31 21:25:20.931  INFO 13196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-31 21:25:20.932  INFO 13196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-31 21:25:20.942  INFO 13196 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-03-31 21:25:20.974  WARN 13196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-31 21:25:21.034  INFO 13196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-31 21:25:21.047  INFO 13196 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-03-31 21:25:21.211  INFO 13196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-31 21:25:21.863  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Started Pidev4Sae2Application in 1.525 seconds (JVM running for 931.898)
+2021-03-31 21:26:27.135  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Starting Pidev4Sae2Application using Java 1.8.0_241 on DESKTOP-K8H0JOM with PID 13196 (C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring\target\classes started by taieb in C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring)
+2021-03-31 21:26:27.136  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : No active profile set, falling back to default profiles: default
+2021-03-31 21:26:27.739  INFO 13196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-31 21:26:27.739  INFO 13196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-31 21:26:27.750  INFO 13196 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-03-31 21:26:27.806  WARN 13196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-31 21:26:27.877  INFO 13196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-31 21:26:27.890  INFO 13196 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-03-31 21:26:28.040  INFO 13196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-31 21:26:28.745  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Started Pidev4Sae2Application in 1.649 seconds (JVM running for 998.778)
+2021-03-31 21:26:37.837  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Starting Pidev4Sae2Application using Java 1.8.0_241 on DESKTOP-K8H0JOM with PID 13196 (C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring\target\classes started by taieb in C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring)
+2021-03-31 21:26:37.838  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : No active profile set, falling back to default profiles: default
+2021-03-31 21:26:38.326  INFO 13196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-31 21:26:38.327  INFO 13196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-31 21:26:38.342  INFO 13196 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-03-31 21:26:38.405  WARN 13196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-31 21:26:38.479  INFO 13196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-31 21:26:38.495  INFO 13196 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-03-31 21:26:38.684  INFO 13196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-31 21:26:39.508  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Started Pidev4Sae2Application in 1.716 seconds (JVM running for 1009.542)
+2021-03-31 21:26:53.159  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Starting Pidev4Sae2Application using Java 1.8.0_241 on DESKTOP-K8H0JOM with PID 13196 (C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring\target\classes started by taieb in C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring)
+2021-03-31 21:26:53.160  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : No active profile set, falling back to default profiles: default
+2021-03-31 21:26:53.651  INFO 13196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-31 21:26:53.651  INFO 13196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-31 21:26:53.678  INFO 13196 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-03-31 21:26:53.736  WARN 13196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-31 21:26:53.806  INFO 13196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-31 21:26:53.818  INFO 13196 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-03-31 21:26:53.967  INFO 13196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-31 21:26:54.772  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Started Pidev4Sae2Application in 1.652 seconds (JVM running for 1024.806)
+2021-03-31 21:26:57.008  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Starting Pidev4Sae2Application using Java 1.8.0_241 on DESKTOP-K8H0JOM with PID 13196 (C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring\target\classes started by taieb in C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring)
+2021-03-31 21:26:57.009  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : No active profile set, falling back to default profiles: default
+2021-03-31 21:26:57.508  INFO 13196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-31 21:26:57.508  INFO 13196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-31 21:26:57.538  INFO 13196 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-03-31 21:26:57.597  WARN 13196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-31 21:26:57.661  INFO 13196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-31 21:26:57.673  INFO 13196 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-03-31 21:26:57.857  INFO 13196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-31 21:26:58.535  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Started Pidev4Sae2Application in 1.567 seconds (JVM running for 1028.569)
+2021-03-31 21:27:27.238  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Starting Pidev4Sae2Application using Java 1.8.0_241 on DESKTOP-K8H0JOM with PID 13196 (C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring\target\classes started by taieb in C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring)
+2021-03-31 21:27:27.239  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : No active profile set, falling back to default profiles: default
+2021-03-31 21:27:27.793  INFO 13196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-31 21:27:27.793  INFO 13196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-31 21:27:27.822  INFO 13196 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-03-31 21:27:27.878  WARN 13196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-31 21:27:27.948  INFO 13196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-31 21:27:27.961  INFO 13196 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-03-31 21:27:28.156  INFO 13196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-31 21:27:28.933  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Started Pidev4Sae2Application in 1.736 seconds (JVM running for 1058.967)
+2021-03-31 21:27:43.363  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Starting Pidev4Sae2Application using Java 1.8.0_241 on DESKTOP-K8H0JOM with PID 13196 (C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring\target\classes started by taieb in C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring)
+2021-03-31 21:27:43.364  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : No active profile set, falling back to default profiles: default
+2021-03-31 21:27:43.876  INFO 13196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-31 21:27:43.876  INFO 13196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-31 21:27:43.897  INFO 13196 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-03-31 21:27:43.940  WARN 13196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-31 21:27:43.997  INFO 13196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-31 21:27:44.007  INFO 13196 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-03-31 21:27:44.165  INFO 13196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-31 21:27:44.698  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Started Pidev4Sae2Application in 1.372 seconds (JVM running for 1074.732)
+2021-03-31 21:28:02.128  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Starting Pidev4Sae2Application using Java 1.8.0_241 on DESKTOP-K8H0JOM with PID 13196 (C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring\target\classes started by taieb in C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring)
+2021-03-31 21:28:02.129  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : No active profile set, falling back to default profiles: default
+2021-03-31 21:28:02.720  INFO 13196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-31 21:28:02.720  INFO 13196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-31 21:28:02.730  INFO 13196 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-03-31 21:28:02.764  WARN 13196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-31 21:28:02.831  INFO 13196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-31 21:28:02.844  INFO 13196 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-03-31 21:28:03.014  INFO 13196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-31 21:28:03.767  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Started Pidev4Sae2Application in 1.678 seconds (JVM running for 1093.801)
+2021-03-31 21:28:10.103  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Starting Pidev4Sae2Application using Java 1.8.0_241 on DESKTOP-K8H0JOM with PID 13196 (C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring\target\classes started by taieb in C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring)
+2021-03-31 21:28:10.104  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : No active profile set, falling back to default profiles: default
+2021-03-31 21:28:10.692  INFO 13196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-31 21:28:10.692  INFO 13196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-31 21:28:10.736  INFO 13196 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-03-31 21:28:10.790  WARN 13196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-31 21:28:10.849  INFO 13196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-31 21:28:10.864  INFO 13196 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-03-31 21:28:11.044  INFO 13196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-31 21:28:11.625  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Started Pidev4Sae2Application in 1.563 seconds (JVM running for 1101.659)
+2021-03-31 21:29:22.053  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Starting Pidev4Sae2Application using Java 1.8.0_241 on DESKTOP-K8H0JOM with PID 13196 (C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring\target\classes started by taieb in C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring)
+2021-03-31 21:29:22.054  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : No active profile set, falling back to default profiles: default
+2021-03-31 21:29:22.595  INFO 13196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-31 21:29:22.595  INFO 13196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-31 21:29:22.619  INFO 13196 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-03-31 21:29:22.676  WARN 13196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-31 21:29:22.739  INFO 13196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-31 21:29:22.752  INFO 13196 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-03-31 21:29:22.914  INFO 13196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-31 21:29:23.634  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Started Pidev4Sae2Application in 1.621 seconds (JVM running for 1173.668)
+2021-03-31 21:30:05.948  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Starting Pidev4Sae2Application using Java 1.8.0_241 on DESKTOP-K8H0JOM with PID 13196 (C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring\target\classes started by taieb in C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring)
+2021-03-31 21:30:05.949  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : No active profile set, falling back to default profiles: default
+2021-03-31 21:30:07.521  INFO 13196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-31 21:30:07.522  INFO 13196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-31 21:30:07.599  INFO 13196 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-03-31 21:30:07.836  WARN 13196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-31 21:30:08.072  INFO 13196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-31 21:30:08.137  INFO 13196 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-03-31 21:30:08.762  INFO 13196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-31 21:30:09.986  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Started Pidev4Sae2Application in 4.122 seconds (JVM running for 1220.02)
+2021-03-31 21:31:16.967  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Starting Pidev4Sae2Application using Java 1.8.0_241 on DESKTOP-K8H0JOM with PID 13196 (C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring\target\classes started by taieb in C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring)
+2021-03-31 21:31:16.967  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : No active profile set, falling back to default profiles: default
+2021-03-31 21:31:17.505  INFO 13196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-31 21:31:17.505  INFO 13196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-31 21:31:17.534  INFO 13196 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-03-31 21:31:17.588  WARN 13196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-31 21:31:17.660  INFO 13196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-31 21:31:17.672  INFO 13196 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-03-31 21:31:17.856  INFO 13196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-31 21:31:18.336  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Started Pidev4Sae2Application in 1.405 seconds (JVM running for 1288.371)
+2021-03-31 21:38:28.096  INFO 13196 --- [http-nio-9293-exec-2] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-31 21:38:28.234 ERROR 13196 --- [http-nio-9293-exec-2] c.e.tn.security.jwt.AuthEntryPointJwt    : Unauthorized error: Full authentication is required to access this resource
+2021-03-31 22:22:34.257  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Starting Pidev4Sae2Application using Java 1.8.0_241 on DESKTOP-K8H0JOM with PID 13196 (C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring\target\classes started by taieb in C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring)
+2021-03-31 22:22:34.258  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : No active profile set, falling back to default profiles: default
+2021-03-31 22:22:35.525  INFO 13196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-31 22:22:35.526  INFO 13196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-31 22:22:35.558  INFO 13196 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-03-31 22:22:35.613  WARN 13196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-31 22:22:35.682  INFO 13196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-31 22:22:35.697  INFO 13196 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-03-31 22:22:36.038  INFO 13196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-31 22:22:36.664  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Started Pidev4Sae2Application in 2.456 seconds (JVM running for 4366.699)
+2021-03-31 22:22:42.891  INFO 13196 --- [http-nio-9293-exec-2] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-31 22:22:42.903 ERROR 13196 --- [http-nio-9293-exec-2] c.e.tn.security.jwt.AuthEntryPointJwt    : Unauthorized error: Full authentication is required to access this resource
+2021-03-31 22:24:18.596 ERROR 13196 --- [http-nio-9293-exec-5] c.e.tn.security.jwt.AuthEntryPointJwt    : Unauthorized error: Full authentication is required to access this resource
+2021-03-31 22:25:46.907  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Starting Pidev4Sae2Application using Java 1.8.0_241 on DESKTOP-K8H0JOM with PID 13196 (C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring\target\classes started by taieb in C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring)
+2021-03-31 22:25:46.907  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : No active profile set, falling back to default profiles: default
+2021-03-31 22:25:47.587  INFO 13196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-31 22:25:47.587  INFO 13196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-31 22:25:47.629  INFO 13196 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-03-31 22:25:47.688  WARN 13196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-31 22:25:47.760  INFO 13196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-31 22:25:47.773  INFO 13196 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-03-31 22:25:47.971  INFO 13196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-31 22:25:48.881  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Started Pidev4Sae2Application in 2.02 seconds (JVM running for 4558.915)
+2021-03-31 22:25:49.058  INFO 13196 --- [http-nio-9293-exec-1] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-31 22:37:55.445  WARN 13196 --- [http-nio-9293-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2021-03-31 22:39:45.600  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Starting Pidev4Sae2Application using Java 1.8.0_241 on DESKTOP-K8H0JOM with PID 13196 (C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring\target\classes started by taieb in C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring)
+2021-03-31 22:39:45.600  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : No active profile set, falling back to default profiles: default
+2021-03-31 22:39:46.316  INFO 13196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-31 22:39:46.316  INFO 13196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-31 22:39:46.332  INFO 13196 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-03-31 22:39:46.393  WARN 13196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-31 22:39:46.472  INFO 13196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-31 22:39:46.484  INFO 13196 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-03-31 22:39:46.680  INFO 13196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-31 22:39:47.446  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Started Pidev4Sae2Application in 1.891 seconds (JVM running for 5397.481)
+2021-03-31 22:39:53.770  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : Starting Pidev4Sae2Application using Java 1.8.0_241 on DESKTOP-K8H0JOM with PID 13196 (C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring\target\classes started by taieb in C:\Users\taieb\Documents\workspace-sts-3.8.4.RELEASE\pidevSpring)
+2021-03-31 22:39:53.771  INFO 13196 --- [restartedMain] com.esprit.tn.Pidev4Sae2Application      : No active profile set, falling back to default profiles: default
+2021-03-31 22:39:54.472  INFO 13196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-31 22:39:54.473  INFO 13196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-31 22:39:54.510  INFO 13196 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-03-31 22:39:54.569  WARN 13196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-31 22:39:54.640  INFO 13196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-31 22:39:54.649  INFO 13196 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-03-31 22:39:54.843  INFO 13196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
