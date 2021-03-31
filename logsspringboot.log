@@ -2316,3 +2316,4 @@ org.springframework.security.web.firewall.RequestRejectedException: The request 
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.43.jar:9.0.43]
 	at java.lang.Thread.run(Unknown Source) [na:1.8.0_261]
 
+2021-03-31 15:56:04.103  WARN 17280 --- [http-nio-9293-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
