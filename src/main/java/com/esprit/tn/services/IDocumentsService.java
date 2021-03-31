@@ -7,7 +7,9 @@ import com.esprit.tn.entities.User;
 
 public interface IDocumentsService {
 	
-	Documents addDocuments(Documents d, int userid);
+	Documents addDocuments(Documents d, long userid);
+	
+	Documents addDocuments1(Documents d);
 
 	public Documents updateDocuments(Documents d, int id);
 	
@@ -22,17 +24,7 @@ public interface IDocumentsService {
 	public int delete(Documents documents);
 
 
-/* 
- * public Documents add(Documents documents, int profileId);
-	public Documents update(Documents documents, int id);
-	public Documents fetchByUser(AppUser appUser);
-	public Documents fetchByProfile(Profile profile);
-	public int delete(Documents documents);
-	public int deleteById(int id);
-	public List<Documents> fetchAll();
- * 
- * 
- * */
+
 
 
 }

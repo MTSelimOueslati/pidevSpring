@@ -22,10 +22,13 @@ public class ContractController {
 	@Autowired
 	ContractService contractservice;
 	
+	
+	
 	@PostMapping("/add/{id}")
 	private Contract addContract(@RequestBody Contract contract, @PathVariable("id")int id)   
 	{  
 		contractservice.addContract(contract,id);  
+		
 		return contract;  
 	}  
 	

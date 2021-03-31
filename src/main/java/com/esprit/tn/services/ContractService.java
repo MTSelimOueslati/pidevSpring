@@ -30,6 +30,8 @@ public class ContractService implements IContractService {
 		contractrepo.save(c);
 		return c;
 	}
+	
+	
 
 	@Override
 	public Contract updateContract(Contract c, int id) {

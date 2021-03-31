@@ -75,7 +75,7 @@ public class UserController {
 		ConfirmationToken token = confirmationTokenRepository.findByConfirmationToken(confirmationToken);
 
 		if (token != null) {
-			User user = userRep.findByName(token.getUser().getName());
+			User user = userRep.findUserByUsername(token.getUser().getUsername());
 			UserForm af = new UserForm();
 		//	af.setEmail(user.getEmail());
 			af.setVerified(true);

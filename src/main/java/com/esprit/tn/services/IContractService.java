@@ -18,6 +18,8 @@ public interface IContractService {
 	public List<Contract> getAllContract();
 	
 	public List<Contract> findByType(ContractType type);
+	
+	
 
 
 }

@@ -31,7 +31,16 @@ public class SubscriptionService implements ISubscriptionService {
 		sub.setStartDate(Date.from(Instant.now()));
 		Date endDate = Date.from(Instant.now().plus(Period.ofDays(30)));
 		sub.setEndDate(endDate);
-		sub.setSubtype("Premium");
+		if (sub.getOffer()==5.00)
+		{
+		sub.setSubtype("NORMAL");
+		}else if (sub.getOffer()==10.00)
+		{
+		sub.setSubtype("SURVEILLANCE");		
+		}else if (sub.getOffer()==12.00)
+		{
+		sub.setSubtype("PREMIUM");
+		}
 		subrepo.save(sub);
 		
 	}

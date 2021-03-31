@@ -1,11 +1,13 @@
 package com.esprit.tn.repositories;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import java.util.Optional;
 
+import com.esprit.tn.entities.ERole;
 import com.esprit.tn.entities.Role;
 
-public interface RoleRepository extends CrudRepository<Role, Integer> {
-	
-	public Role findByRoleName(String roleName); 
-
+@Repository
+public interface RoleRepository extends JpaRepository<Role, Long> {
+	Optional<Role> findByName(ERole name);
 }

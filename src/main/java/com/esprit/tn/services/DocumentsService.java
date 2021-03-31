@@ -20,10 +20,18 @@ public class DocumentsService implements IDocumentsService {
 	@Autowired
 	UserRepository userrepo;
 
+	
+	@Override
+	public Documents addDocuments1(Documents d) {
+		// TODO Auto-generated method stub
+	
+		docrepo.save(d);
+		return d;
+	}
 
 	
 	@Override
-	public Documents addDocuments(Documents d, int userid) {
+	public Documents addDocuments(Documents d, long userid) {
 		// TODO Auto-generated method stub
 		d.setUser(userrepo.findById(userid).get());
 		docrepo.save(d);

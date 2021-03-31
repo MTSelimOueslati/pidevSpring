@@ -43,12 +43,12 @@ public class DocumentsController {
 			MediaType.APPLICATION_JSON_VALUE,
 			MediaType.MULTIPART_FORM_DATA_VALUE
 	})  
-	private Documents adddocument(@RequestPart("evJson")String docsJson,
+	private Documents adddocument(/*@RequestPart("evJson")String docsJson,*/
 			@RequestPart("fichedepaie") MultipartFile filefiche,
 			@RequestPart("piecedidentite") MultipartFile fileidentite,
 			@RequestPart("lettredengagement") MultipartFile filelettre,
-			@RequestPart("cautionnement") MultipartFile filecaut,
-			@RequestParam("userId") int userId)   
+			@RequestPart("cautionnement") MultipartFile filecaut
+			/*,@RequestParam("userId") int userId*/)   
 	{  	
 		
 		Documents docs= new Documents();
@@ -86,7 +86,8 @@ public class DocumentsController {
 		System.out.println("file url =====>"+fileDownloadUri4);
 		docs.setCautionnement(fileDownloadUri4.getBytes());
 		
-		docserv.addDocuments(docs, userId);
+		//docserv.addDocuments(docs, userId);
+		docserv.addDocuments1(docs);
 		return docs;  
 	}
 	
@@ -141,7 +142,7 @@ public class DocumentsController {
 	}  
 	
 	@GetMapping("/getOne")
-	public Documents getByUser(@RequestParam("userId") int userId){
+	public Documents getByUser(@RequestParam("userId") long userId){
 		return docserv.getByUser(userrepo.findById(userId).get());
 	}
 

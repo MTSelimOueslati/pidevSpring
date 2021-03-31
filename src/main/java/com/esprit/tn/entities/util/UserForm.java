@@ -1,31 +1,37 @@
 package com.esprit.tn.entities.util;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.FetchType;
+import javax.persistence.ManyToOne;
 
 import org.springframework.data.annotation.Transient;
 
+import com.esprit.tn.entities.Role;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 public class UserForm {
-	private String name;
+	private String username;
 	private int phone_number;
 	private String email;
 	private String password;
 	private String address;
 	private boolean verified;
-	
+
 	public UserForm() {
 		super();
 	}
 	/**
 	 * @return the name
 	 */
-	public String getName() {
-		return name;
+	public String getUsername() {
+		return username;
 	}
 	/**
 	 * @param name the name to set
 	 */
-	public void setName(String name) {
-		this.name = name;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 	/**
 	 * @return the phone_number

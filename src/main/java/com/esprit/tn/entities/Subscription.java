@@ -12,6 +12,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -42,9 +43,9 @@ public class Subscription {
 
 	String subtype;
 	
-	/*@OneToMany(cascade = CascadeType.PERSIST,mappedBy="subscription",fetch=FetchType.LAZY)
+	@ManyToOne(cascade = CascadeType.PERSIST)
 	//@JsonManagedReference
-	private Set<User> user;*/
+	private User user;
 
 	public Subscription() {
 		super();
@@ -110,6 +111,18 @@ public class Subscription {
 		this.startDate = startDate;
 		this.endDate = endDate;
 		this.subtype = subtype;
+	}
+
+
+
+	public User getUser() {
+		return user;
+	}
+
+
+
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 
