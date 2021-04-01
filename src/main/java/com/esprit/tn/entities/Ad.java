@@ -11,6 +11,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -72,6 +73,14 @@ private static final long serialVersionUID = 1L;
 	
 	@Column(name="Furnished")
 	private boolean furnished;
+	
+	@Column(name="photo")
+	@Lob
+    private byte[] photo;
+	
+	@Column(name="Video")
+	@Lob
+    private byte[] video;
 	
 	@Column(name= "dateCreated")
 	@Temporal(TemporalType.DATE)
@@ -296,6 +305,32 @@ private static final long serialVersionUID = 1L;
 	public void setDateCreated(Date dateCreated) {
 		this.dateCreated = dateCreated;
 	}
+	
+	
+
+	
+	public Ad(int idAd, String ad, AdType adType, String description, float price, String location, String area,
+			int nbrooms, int nbbath, int nbgarage, boolean garden, boolean elevator, boolean pool, boolean furnished,
+			byte[] photo, byte[] video, Date dateCreated) {
+		super();
+		this.idAd = idAd;
+		this.ad = ad;
+		this.adType = adType;
+		this.description = description;
+		this.price = price;
+		this.location = location;
+		this.area = area;
+		this.nbrooms = nbrooms;
+		this.nbbath = nbbath;
+		this.nbgarage = nbgarage;
+		this.garden = garden;
+		this.elevator = elevator;
+		this.pool = pool;
+		this.furnished = furnished;
+		this.photo = photo;
+		this.video = video;
+		this.dateCreated = dateCreated;
+	}
 
 	public Ad(String ad, AdType adType, String description, float price, String location, String area, int nbrooms,
 			int nbbath, int nbgarage, boolean garden, boolean elevator, boolean pool, boolean furnished,
@@ -321,6 +356,48 @@ private static final long serialVersionUID = 1L;
 
 	public Ad() {
 		super();
+	}
+
+	/**
+	 * @return the photo
+	 */
+	public byte[] getPhoto() {
+		return photo;
+	}
+
+	/**
+	 * @param photo the photo to set
+	 */
+	public void setPhoto(byte[] photo) {
+		this.photo = photo;
+	}
+
+	/**
+	 * @return the video
+	 */
+	public byte[] getVideo() {
+		return video;
+	}
+
+	/**
+	 * @param video the video to set
+	 */
+	public void setVideo(byte[] video) {
+		this.video = video;
+	}
+
+	/**
+	 * @return the state
+	 */
+	public State getState() {
+		return state;
+	}
+
+	/**
+	 * @param state the state to set
+	 */
+	public void setState(State state) {
+		this.state = state;
 	}
 
 	
