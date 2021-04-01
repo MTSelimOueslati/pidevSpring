@@ -1,5 +1,6 @@
 package com.esprit.tn.security.services;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
@@ -9,6 +10,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import com.esprit.tn.entities.Role;
 import com.esprit.tn.entities.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -36,6 +38,7 @@ public class UserDetailsImpl implements UserDetails {
 	}
 
 		public static UserDetailsImpl build(User user) {
+			
 		List<GrantedAuthority> authorities = user.getRoles().stream()
 				.map(role -> new SimpleGrantedAuthority(role.getName().name()))
 					.collect(Collectors.toList());
@@ -47,6 +50,7 @@ public class UserDetailsImpl implements UserDetails {
 				user.getPassword(), 
 				authorities);
 	}
+
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {

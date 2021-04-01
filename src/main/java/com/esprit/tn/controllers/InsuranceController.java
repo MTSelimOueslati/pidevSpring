@@ -3,6 +3,7 @@ package com.esprit.tn.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,14 +24,16 @@ public class InsuranceController {
 	@Autowired
 	InsuranceService insuranceserv;
 	
-	@PostMapping("/add")
+	@PostMapping("/add")	
+	//@PreAuthorize("hasRole('ADMIN')")
 	private Insurance addInsurance(@RequestBody Insurance insurance)   
 	{  
 		insuranceserv.addInsurance(insurance);  
 		return insurance;  
 	}
 	
-	@GetMapping("/show")  
+	@GetMapping("/show") 
+	//@PreAuthorize("hasRole('SIMPLE_USER') or hasRole('BROKER') or hasRole('ADMIN')")
 	private List<Insurance> getAllInsurance()   
 	{  
 		return insuranceserv.getAllInsurance(); 

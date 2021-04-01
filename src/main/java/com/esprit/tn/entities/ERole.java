@@ -1,6 +1,8 @@
 package com.esprit.tn.entities;
 
 public enum ERole {
-	ADMIN,SIMPLE_USER,BROKER
+	ROLE_ADMIN,
+	ROLE_SIMPLE_USER,
+	ROLE_BROKER
 
 }

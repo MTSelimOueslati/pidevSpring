@@ -41,6 +41,7 @@ public class SubscriptionService implements ISubscriptionService {
 		{
 		sub.setSubtype("PREMIUM");
 		}
+		sub.setUser(user);
 		subrepo.save(sub);
 		
 	}

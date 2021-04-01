@@ -16,14 +16,14 @@ public interface SubscriptionRepository extends CrudRepository<Subscription, Int
 
 
 			
-	@Query(value = "SELECT id_strype FROM `user` WHERE user_id=:id", nativeQuery = true)
+	@Query(value = "SELECT id_strype FROM `user` WHERE id=:id", nativeQuery = true)
 	public String getstripeidbyiduser(@Param("id") int id);
 	
 	
 	
 
 	
-	@Query(value = "SELECT subscription_type FROM `subscriptions` WHERE user_user_id=:id", nativeQuery = true)
+	@Query(value = "SELECT subscription_type FROM `subscriptions` WHERE user_id=:id", nativeQuery = true)
 	public String getsubtype(@Param("id") int id);
 	
 	

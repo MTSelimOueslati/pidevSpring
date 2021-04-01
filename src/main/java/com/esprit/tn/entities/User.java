@@ -64,10 +64,16 @@ public class User implements Serializable   {
 				inverseJoinColumns = @JoinColumn(name = "role_id"))
 	private Set<Role> roles = new HashSet<>();
 	
-	@ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
-	@JsonIgnoreProperties(ignoreUnknown = true, value = {"user"})
-	private Role role;
+
 	
+
+	public Set<Role> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(Set<Role> roles) {
+		this.roles = roles;
+	}
 
 	@OneToMany(cascade = CascadeType.PERSIST,mappedBy="user",fetch=FetchType.LAZY)
 	@JsonIgnoreProperties(ignoreUnknown = true, value = {"user"})
@@ -82,6 +88,10 @@ public class User implements Serializable   {
 	@OneToMany(cascade = CascadeType.PERSIST,mappedBy="user",fetch=FetchType.LAZY)
 	@JsonIgnoreProperties(ignoreUnknown = true, value = {"user"})
 	private Set<Offer> offers;
+	
+	@OneToMany(cascade = CascadeType.PERSIST,mappedBy="user",fetch=FetchType.LAZY)
+	@JsonIgnoreProperties(ignoreUnknown = true, value = {"user"})
+	private Set<Subscription> subscription;
 	
 
 	@OneToMany(cascade = CascadeType.PERSIST,mappedBy="user",fetch=FetchType.LAZY)
@@ -166,29 +176,11 @@ public class User implements Serializable   {
 	}
 
 
-	
-	/*@Override
-	public Collection<? extends GrantedAuthority> getAuthorities() {
-		// TODO Auto-generated method stub
-		Collection<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
-		Role r = user.getRole();
-		authorities.add(new SimpleGrantedAuthority(r.getRoleName()));
-		return null;
-	}*/
-
-
-
-	public Set<Role> getRoles() {
-		return roles;
-	}
 
 	public User() {
 		super();
 	}
 
-	public void setRoles(Set<Role> roles) {
-		this.roles = roles;
-	}
 
 	/**
 	 * @return the verified
